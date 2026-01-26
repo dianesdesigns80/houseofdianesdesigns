@@ -3,105 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>House of Diane’s Designs</title>
-  <meta name="description" content="House of Diane’s Designs — a faith-forward creative house offering apparel, books, music, consultations, and handcrafted worship pieces." />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>House of Diane's Designs</title>
+  
+  <!-- Agrandir Grand Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Agrandir+Grand&display=swap" rel="stylesheet">
 
-  <style>
-  a.button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.7rem 1.5rem;
-      border: 1px solid #1f1f1f;
-      text-decoration: none;
-      color: #1f1f1f;
-      font-weight: 500;
-  }
-</style>
-
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <h1>House of Diane’s Designs</h1>
-  <p><strong>Welcome to the House God Built.</strong><br>A faith-forward creative home housing every gift, skill, and assignment entrusted to me.</p>
-  <nav>
-    <a href="#about">About the House</a>
-    <a href="#shop">Shop</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <!-- HERO / STATEMENT -->
+  <header>
+    <h1>House of Diane's Designs</h1>
+    <p class="hero-text">
+      I am the house that God built, filled with gifts and talents to glorify the Kingdom of God.
+      Let me help bring YOUR vision to life! Shop our music, line of faith-based tees and visit our bookstore!
+      Do you have an idea that you want to bring to life? Schedule your consultation today!
+    </p>
+    <a href="#shop" class="button">Shop Now</a>
+    <a href="#consult" class="button">Book Consultation</a>
+  </header>
 
-<section id="about">
-  <h2>The House</h2>
-  <p>
-    House of Diane’s Designs was built on the understanding that we are God’s workmanship. This house represents every gift, every creative assignment, and every act of obedience entrusted to me — stewarded with intention and shared to equip others.
-  </p>
-  <p>
-    This is not just a brand. It is stewardship.
-  </p>
-</section>
+  <!-- SHOP SECTION -->
+  <section id="shop">
+    <h2>Our Shop</h2>
+    <p>Discover our faith-based products, designed to inspire and glorify God.</p>
+    <div class="shop-grid">
+      <div class="shop-item">
+        <h3>T-Shirts</h3>
+        <p>Shop our custom tees from our Print-on-Demand store.</p>
+        <a href="https://4hg.creator-spring.com" target="_blank" class="button">Shop Tees</a>
+      </div>
+      <div class="shop-item">
+        <h3>Books & Journals</h3>
+        <p>Visit our Amazon bookstore for uplifting faith-based reads.</p>
+        <a href="https://www.amazon.com/stores/Ms.-Jennifer-D.-Ming/author/B00P530VLU?ref=ap_rdr" target="_blank" class="button">Visit Bookstore</a>
+      </div>
+      <div class="shop-item">
+        <h3>Music</h3>
+        <p>Shop our inspirational music albums and worship songs.</p>
+        <a href="https://houseofdianesdesigns.etsy.com" target="_blank" class="button">Shop Music</a>
+      </div>
+    </div>
+  </section>
 
-<section id="shop">
-  <h2>Shop the House</h2>
-  <div class="grid">
-    <div class="card">
-      <span class="tag">Apparel</span>
-      <h3>T-Shirts</h3>
-      <p>Faith-inspired apparel available through our official merchandise store.</p>
-      <a class="button" href="https://4hg.creator-spring.com" target="_blank" rel="noopener">View Apparel</a>
-    </div>
-    <div class="card">
-      <span class="tag">Books & Journals</span>
-      <h3>Amazon KDP</h3>
-      <p>Devotionals, journals, and guided resources available on Amazon.</p>
-      <a class="button" href="https://www.amazon.com/stores/Ms.-Jennifer-D.-Ming/author/B00P530VLU" target="_blank" rel="noopener">View Books</a>
-    </div>
-    <div class="card">
-      <span class="tag">Music</span>
-      <h3>Sound & Worship</h3>
-      <p>Original music available across streaming platforms and Etsy.</p>
-      <a class="button" href="https://houseofdianesdesigns.etsy.com" target="_blank" rel="noopener">Listen</a>
-    </div>
-    <div class="card">
-      <span class="tag">Mended Threads</span>
-      <h3>Handcrafted Worship Pieces</h3>
-      <p>Prayer shawls, garments, flags, and sewn creations.</p>
-      <strong>Coming Soon</strong>
-    </div>
-  </div>
-</section>
+  <!-- CONSULTATION SECTION -->
+  <section id="consult">
+    <h2>Consultation Services</h2>
+    <p>Do you have a vision? I can help bring it to life! Specializing in self-publishing, custom tees, KDP, Silhouette Cameo, and heat press guidance.</p>
+    <a href="mailto:houseofdianesdesigns@gmail.com" class="button">Schedule Consultation</a>
+  </section>
 
-<section id="services">
-  <h2>Creative Consultations</h2>
-  <p>Guidance for creators ready to steward their God-given ideas with clarity and excellence.</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Self-Publishing (KDP)</h3>
-      <p>From manuscript to marketplace.</p>
-    </div>
-    <div class="card">
-      <h3>Apparel Creation</h3>
-      <p>Silhouette Cameo, heat press, and setup guidance.</p>
-    </div>
-    <div class="card">
-      <h3>Creative Clarity</h3>
-      <p>Product and vision alignment for faith-based creators.</p>
-    </div>
-  </div>
-</section>
+  <!-- MENDED THREADS SECTION -->
+  <section id="mended">
+    <h2>Mended Threads</h2>
+    <p>Coming Soon: Hand-sewn worship garments, prayer shawls, flags, and prayer pillows. Stay tuned!</p>
+  </section>
 
-<section id="contact">
-  <h2>Contact the House</h2>
-  <p>For consultation requests, collaborations, or general inquiries.</p>
-  <p>Email: <strong>houseofdianesdesigns@gmail.com</strong></p>
-</section>
-
-<footer>
-  © 2026 House of Diane’s Designs · All Rights Reserved
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 House of Diane's Designs. All rights reserved.</p>
+    <p>Email: <a href="mailto:houseofdianesdesigns@gmail.com" style="color: #C9A24D;">houseofdianesdesigns@gmail.com</a></p>
+  </footer>
 
 </body>
 </html>
