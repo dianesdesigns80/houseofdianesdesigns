@@ -158,17 +158,3 @@ footer a {
   .shop-item { flex: 1 1 100%; }
   header h1 { font-size: 2.3rem; }
 }
-/* FORCE FOOTER VISIBILITY (SAFETY RESET) */
-footer {
-  display: block;
-  background-color: #5B2D8B;
-  color: #ffffff;
-  text-align: center;
-  padding: 25px;
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: #C9A24D;
-  text-decoration: none;
-}
