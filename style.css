@@ -1,30 +1,116 @@
+/* ------------------------------
+   HOUSE OF DIANE'S DESIGNS STYLE
+   Purple + Gold Theme | Minimal & Elegant
+------------------------------ */
+
+/* Body */
 body {
-  font-family: Georgia, serif;
-  background-color: #ffffff;
+  font-family: 'Georgia', serif;
+  background-color: #fdfbf7; /* soft cream */
+  color: #222222; /* charcoal text */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headers */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: #5B2D8B; /* royal purple */
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.8rem; }
+
+/* Paragraphs */
+p {
+  font-family: 'Georgia', serif;
   color: #222222;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
-header {
-  background-color: #5B2D8B;
-  color: white;
-  padding: 20px;
-}
-
+/* Links */
 a {
-  color: #5B2D8B;
+  color: #5B2D8B; /* royal purple */
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 a:hover {
-  color: #3D1A5E;
+  color: #3D1A5E; /* darker purple */
 }
 
-button {
-  background-color: #5B2D8B;
-  color: white;
-  border: none;
-  padding: 10px 16px;
+/* Buttons & Call-to-Action Links */
+a.button, button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid #C9A24D; /* gold border */
+  background-color: #5B2D8B; /* purple background */
+  color: #ffffff; /* white text */
+  font-weight: 500;
+  text-align: center;
   cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+a.button:hover, button:hover {
+  background-color: #3D1A5E; /* darker purple */
+  border-color: #C9A24D; /* gold border remains */
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+}
+
+section:nth-child(even) {
+  background-color: #f7f7f7; /* subtle alternates for elegance */
+}
+
+/* Forms */
+input, textarea, select {
+  font-family: 'Georgia', serif;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Form Submit Buttons */
+input[type="submit"], button.submit {
+  background-color: #5B2D8B;
+  color: #fff;
+  border: 1px solid #C9A24D;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover, button.submit:hover {
+  background-color: #3D1A5E;
+}
+
+/* Footer */
+footer {
+  background-color: #5B2D8B;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Text */
+@media screen and (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.4rem; }
+  section { padding: 40px 10px; }
 }
 
 button:hover {
