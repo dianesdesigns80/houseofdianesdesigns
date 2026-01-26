@@ -73,3 +73,41 @@ a.button, button {
   font-weight: 600;
   font-size: 1rem;
   text-align:
+/* SHOP GRID */
+.shop-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto 0 auto;
+}
+
+.shop-item {
+  flex: 1 1 30%; /* 3 items per row, will wrap on smaller screens */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.shop-item h3 {
+  color: #5B2D8B;
+  margin-bottom: 10px;
+}
+
+.shop-item p {
+  color: #222222;
+  margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+  .shop-item { flex: 1 1 45%; } /* 2 items per row */
+}
+
+@media screen and (max-width: 600px) {
+  .shop-item { flex: 1 1 100%; } /* stacked for mobile */
+}
