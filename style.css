@@ -153,6 +153,13 @@ footer a {
 @media (max-width: 900px) {
   .shop-item { flex: 1 1 45%; }
 }
+.section-container,
+.shop-item,
+.card {
+  opacity: 1;
+  transform: none;
+}
+
 
 @media (max-width: 600px) {
   .shop-item { flex: 1 1 100%; }
