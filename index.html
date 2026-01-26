@@ -1,72 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>House of Diane's Designs</title>
-  
-  <!-- Agrandir Grand Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Agrandir+Grand&display=swap" rel="stylesheet">
+/* ------------------------------
+   HOUSE OF DIANE'S DESIGNS STYLE
+   Font: Agrandir Grand
+   Colors: Purple + Gold + Minimal & Elegant
+------------------------------ */
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
+/* Import Agrandir Grand font */
+@import url('https://fonts.googleapis.com/css2?family=Agrandir+Grand&display=swap');
 
-<body>
+/* Body */
+body {
+  font-family: 'Agrandir Grand', sans-serif;
+  background-color: #fdfbf7; /* Soft cream */
+  color: #222222;             /* Charcoal text */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- HERO / STATEMENT -->
- <header>
-  <h1>House of Diane's Designs</h1>
-  <p class="hero-text">
-    I am the house that God built, filled with gifts and talents to glorify the Kingdom of God.
-    Let me help bring YOUR vision to life! Shop our music, line of faith-based tees and visit our bookstore!
-    Do you have an idea that you want to bring to life? Schedule your consultation today!
-  </p>
-  <a href="#shop" class="button">Shop Now</a>
-  <a href="#consult" class="button">Book Consultation</a>
-</header>
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
 
-  <!-- SHOP SECTION -->
-  <section id="shop">
-  <h2>Our Shop</h2>
-  <p>Discover our faith-based products, designed to inspire and glorify God.</p>
-  <div class="shop-grid">
-    <div class="shop-item">
-      <h3>T-Shirts</h3>
-      <p>Shop our custom tees from our Print-on-Demand store.</p>
-      <a href="https://4hg.creator-spring.com" target="_blank" class="button">Shop Tees</a>
-    </div>
-    <div class="shop-item">
-      <h3>Books & Journals</h3>
-      <p>Visit our Amazon bookstore for uplifting faith-based reads.</p>
-      <a href="https://www.amazon.com/stores/Ms.-Jennifer-D.-Ming/author/B00P530VLU?ref=ap_rdr" target="_blank" class="button">Visit Bookstore</a>
-    </div>
-    <div class="shop-item">
-      <h3>Music</h3>
-      <p>Shop our inspirational music albums and worship songs.</p>
-      <a href="https://houseofdianesdesigns.etsy.com" target="_blank" class="button">Shop Music</a>
-    </div>
-  </div>
-</section>
+header h1 {
+  font-size: 3rem;
+  color: #5B2D8B; /* Royal purple */
+  margin-bottom: 0.5rem;
+  position: relative;
+}
 
-  <!-- CONSULTATION SECTION -->
-  <section id="consult">
-    <h2>Consultation Services</h2>
-    <p>Do you have a vision? I can help bring it to life! Specializing in self-publishing, custom tees, KDP, Silhouette Cameo, and heat press guidance.</p>
-    <a href="mailto:houseofdianesdesigns@gmail.com" class="button">Schedule Consultation</a>
-  </section>
+/* Purple underline under header */
+header h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: #5B2D8B;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
 
-  <!-- MENDED THREADS SECTION -->
-  <section id="mended">
-    <h2>Mended Threads</h2>
-    <p>Coming Soon: Hand-sewn worship garments, prayer shawls, flags, and prayer pillows. Stay tuned!</p>
-  </section>
+/* Statement / Hero Text */
+.hero-text {
+  max-width: 900px;
+  margin: 20px auto 40px auto;
+  font-size: 1.2rem;
+  color: #222222;
+  text-align: center;
+}
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 House of Diane's Designs. All rights reserved.</p>
-    <p>Email: <a href="mailto:houseofdianesdesigns@gmail.com" style="color: #C9A24D;">houseofdianesdesigns@gmail.com</a></p>
-  </footer>
+/* Links */
+a {
+  color: #5B2D8B;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
-</body>
-</html>
+a:hover {
+  color: #3D1A5E; /* Darker purple */
+}
+
+/* Buttons / CTA */
+a.button, button {
+  display: inline-block;
+  margin: 1rem 10px;
+  padding: 0.8rem 1.8rem;
+  border: 1px solid #C9A24D; /* Gold border */
+  background-color: #5B2D8B; /* Purple background */
+  color: #ffffff;             /* White text */
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+a.button:hover, button:hover {
+  background-color: #3D1A5E; /* Darker purple hover */
+  border-color: #C9A24D;
+}
+
+/* SECTION CONTAINERS */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* SHOP GRID */
+.shop-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.shop-item {
+  flex: 1 1 30%;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.shop-item h3 {
+  color: #5B2D8B;
+  margin-bottom: 10px;
+}
+
+.shop-item p {
+  color: #222222;
+  margin-bottom: 15px;
+}
+
+/* CARDS FOR CONSULTATION AND MENDED THREADS */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  background-color: #5B2D8B;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+  .shop-item { flex: 1 1 45%; }
+}
+
+@media screen and (max-width: 600px) {
+  .shop-item { flex: 1 1 100%; }
+  .card { max-width: 90%; padding: 20px; }
+  header h1 { font-size: 2.2rem; }
+  .hero-text { font-size: 1rem; }
+}
+
