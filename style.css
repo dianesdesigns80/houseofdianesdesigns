@@ -1,0 +1,32 @@
+body {
+  font-family: Georgia, serif;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+header {
+  background-color: #5B2D8B;
+  color: white;
+  padding: 20px;
+}
+
+a {
+  color: #5B2D8B;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3D1A5E;
+}
+
+button {
+  background-color: #5B2D8B;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3D1A5E;
+}
