@@ -62,6 +62,53 @@
       <h2>Consultation Services</h2>
       <p>
         Ready to bring your idea to life?
-        Get guidance on self-publishing, KDP, custom apparel, Silhouette Cameo, and heat press setup.
+        Get guidance on self-publishing, KDP, custom apparel,
+        Silhouette Cameo, and heat press setup.
       </p>
+      <a href="mailto:houseofdianesdesigns@gmail.com" class="button">
+        Schedule Consultation
+      </a>
+    </div>
+  </section>
 
+  <!-- MENDED THREADS -->
+  <section id="mended" class="section-container">
+    <div class="card">
+      <h2>Mended Threads</h2>
+      <p>
+        <strong>Coming Soon</strong><br>
+        Hand-sewn worship garments, prayer shawls, flags,
+        and prayer pillows.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 House of Diane's Designs</p>
+    <p>
+      <a href="mailto:houseofdianesdesigns@gmail.com">
+        houseofdianesdesigns@gmail.com
+      </a>
+    </p>
+  </footer>
+
+  <!-- FADE-IN SCRIPT -->
+  <script>
+    const elements = document.querySelectorAll(
+      '.section-container, .shop-item, .card'
+    );
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
