@@ -17,15 +17,21 @@ body {
   line-height: 1.6;
 }
 
-/* HERO */
+/* ==============================
+   HERO SECTION
+============================== */
+
 header {
+  position: relative;
   text-align: center;
   padding: 90px 20px;
-  position: relative;
-  background-image: url('hero-banner.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  font-family: 'Montserrat', sans-serif;
+
+  /* Background image with subtle overlay */
+  background: 
+    linear-gradient(rgba(245, 240, 255, 0.3), rgba(245, 240, 255, 0.3)), /* soft lavender veil */
+    url('hero-banner.png') center/cover no-repeat;
+  color: #222;
 }
 
 header h1,
@@ -33,14 +39,6 @@ header h1,
 .hero-buttons {
   position: relative;
   z-index: 1;
-}
-
-header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(245, 240, 255, 0.85); /* soft lavender veil */
-  z-index: 0;
 }
 
 header h1::after {
@@ -65,6 +63,51 @@ header h1::after {
   margin-top: 20px;
   position: relative;
   z-index: 1;
+}
+
+/* Buttons */
+a.button {
+  display: inline-block;
+  margin: 10px;
+  padding: 0.8rem 1.8rem;
+  background: #5B2D8B; /* purple */
+  color: #fff;
+  border: 1px solid #C9A24D; /* gold border */
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a.button:hover {
+  background: #3D1A5E; /* darker purple hover */
+  transform: scale(1.05);
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center;    /* horizontal center */
+  justify-content: center; /* vertical center */
+  text-align: center;
+  padding: 30px 20px;
+  background: #5B2D8B;
+  color: #fff;
+}
+
+footer p,
+footer a {
+  margin: 5px 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* Buttons */
