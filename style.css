@@ -1,6 +1,5 @@
 /* ==============================
    HOUSE OF DIANE'S DESIGNS
-   Bold • Faith-Forward • Elegant
 ============================== */
 
 html {
@@ -16,16 +15,15 @@ body {
 }
 
 /* ==============================
-   HERO SECTION (No Overlay)
+   HERO SECTION
 ============================== */
 
 header {
   position: relative;
   text-align: center;
   padding: 90px 20px;
-  font-family: 'Montserrat', sans-serif;
 
-  background-image: url('images/hero-banner.png'); /* adjust path if needed */
+  background-image: url('hero-banner.png'); /* adjust path */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -36,7 +34,7 @@ header {
 header h1,
 .hero-text,
 .hero-buttons {
-  position: relative; 
+  position: relative;
   z-index: 1;
 }
 
@@ -68,9 +66,9 @@ a.button {
   display: inline-block;
   margin: 10px;
   padding: 0.8rem 1.8rem;
-  background: #5B2D8B; /* purple */
+  background: #5B2D8B;
   color: #fff;
-  border: 1px solid #C9A24D; /* gold border */
+  border: 1px solid #C9A24D;
   border-radius: 8px;
   font-weight: 700;
   text-decoration: none;
@@ -78,7 +76,7 @@ a.button {
 }
 
 a.button:hover {
-  background: #3D1A5E; /* darker purple hover */
+  background: #3D1A5E;
   transform: scale(1.05);
 }
 
@@ -103,14 +101,14 @@ h2::after {
   border-radius: 2px;
 }
 
-/* CARD STYLING */
+/* Card styling for all cards */
 .card {
   background: #fff;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 20px 0;
+  margin: 20px;
   text-align: center;
 }
 
@@ -120,31 +118,31 @@ h2::after {
 }
 
 /* ==============================
-   SHOP GRID / SHOP ITEMS
+   SHOP GRID
 ============================== */
 
 .shop-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .shop-item.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 30%; /* 3 cards per row */
+  min-width: 250px; /* mobile responsiveness */
 }
 
-.shop-item.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
+/* Buttons inside shop items */
 .shop-item.card .button {
   margin-top: 15px;
+}
+
+/* Consultation card */
+.consult-card {
+  max-width: 600px;
+  margin: 30px auto 0;
 }
 
 /* ==============================
@@ -168,6 +166,11 @@ footer a {
   color: #fff;
   text-decoration: none;
 }
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 
 footer a:hover {
   text-decoration: underline;
