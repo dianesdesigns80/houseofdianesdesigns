@@ -40,7 +40,17 @@ header h1::after {
   margin: 0 auto 20px;
   font-size: 1.15rem;
   text-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  font-weight: 700; /* make text bold */
 }
+
+.hero-scripture {
+  margin-top: 20px;
+  font-style: italic;
+  color: #5B2D8B;
+  font-weight: 700; /* bold scripture */
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
 
 .hero-scripture {
   margin-top: 20px;
