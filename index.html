@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>House of Diane's Designs</title>
 
- <!-- Font -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="./style.css">
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -36,22 +36,22 @@
     <h2>Shop the House</h2>
 
     <div class="shop-grid">
-      <div class="shop-item">
+      <div class="shop-item card">
         <h3>Faith-Based Tees</h3>
         <p>Bold apparel designed to spark conversations and glorify God.</p>
         <a href="https://4hg.creator-spring.com" target="_blank" class="button">Shop Tees</a>
       </div>
 
-      <div class="shop-item">
+      <div class="shop-item card">
         <h3>Books & Journals</h3>
         <p>Devotionals, journals, and faith-filled resources.</p>
         <a href="https://www.amazon.com/stores/Ms.-Jennifer-D.-Ming/author/B00P530VLU" target="_blank" class="button">Visit Bookstore</a>
       </div>
 
-      <div class="shop-item">
-        <h3>Music</h3>
-        <p>Worship and inspirational music created to stir hearts.</p>
-        <a href="https://houseofdianesdesigns.etsy.com" target="_blank" class="button">Shop Music</a>
+      <div class="shop-item card">
+        <h3>Etsy Shop</h3>
+        <p>Worship and inspirational music, apparel, and digital downloads created to stir hearts.</p>
+        <a href="https://houseofdianesdesigns.etsy.com" target="_blank" class="button">Visit Etsy Shop</a>
       </div>
     </div>
   </section>
@@ -63,7 +63,7 @@
       <p>
         Ready to bring your idea to life?
         Get guidance on self-publishing, KDP, custom apparel,
-        Silhouette Cameo, and heat press setup.
+        and Silhouette Cameo.
       </p>
       <a href="mailto:houseofdianesdesigns@gmail.com" class="button">
         Schedule Consultation
@@ -95,9 +95,7 @@
 
   <!-- FADE-IN SCRIPT -->
   <script>
-    const elements = document.querySelectorAll(
-      '.section-container, .shop-item, .card'
-    );
+    const elements = document.querySelectorAll('.section-container, .shop-item, .card');
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
