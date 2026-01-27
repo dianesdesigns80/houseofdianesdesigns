@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>House of Diane's Designs</title>
 
-  <!-- Google Font -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- External CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <!-- HERO -->
-  <header>
+  <header class="hero">
     <h1>House of Diane's Designs</h1>
 
     <p class="hero-text">
       I am the house that God built, filled with gifts and talents to glorify the Kingdom of God.
       Let me help bring <strong>YOUR</strong> vision to life!
-      Shop our music, line of faith-based tees and visit our bookstore.
+      Shop our music, line of faith-based tees, and visit our bookstore.
       Do you have an idea you want to bring to life? Schedule your consultation today!
     </p>
 
@@ -32,39 +32,37 @@
   </header>
 
   <!-- SHOP -->
-  <section id="shop" class="section-container">
-    <div class="card shop-title-card">
-      <h2>Shop the House</h2>
-    </div>
+  <section id="shop" class="section">
+    <h2>Shop the House</h2>
 
     <div class="shop-grid">
-      <div class="shop-item card">
+      <div class="card">
         <h3>Faith-Based Tees</h3>
         <p>Bold apparel designed to spark conversations and glorify God.</p>
         <a href="https://4hg.creator-spring.com" target="_blank" class="button">Shop Tees</a>
       </div>
 
-      <div class="shop-item card">
+      <div class="card">
         <h3>Books & Journals</h3>
         <p>Devotionals, journals, and faith-filled resources.</p>
         <a href="https://www.amazon.com/stores/Ms.-Jennifer-D.-Ming/author/B00P530VLU" target="_blank" class="button">Visit Bookstore</a>
       </div>
 
-      <div class="shop-item card">
-        <h3>Etsy Shop</h3>
-        <p>Worship and inspirational music, apparel, and digital downloads created to stir hearts.</p>
-        <a href="https://houseofdianesdesigns.etsy.com" target="_blank" class="button">Visit Etsy Shop</a>
+      <div class="card">
+        <h3>Etsy Store</h3>
+        <p>Worship and inspirational music created to stir hearts.
+           Digital downloads available to heal the heart.</p>
+        <a href="https://houseofdianesdesigns.etsy.com" target="_blank" class="button">Visit Etsy</a>
       </div>
     </div>
   </section>
 
-  <!-- CONSULTATION -->
-  <section id="consult" class="section-container">
-    <div class="card consult-card">
+  <!-- CONSULT -->
+  <section id="consult" class="section">
+    <div class="card center-card">
       <h2>Consultation Services</h2>
       <p>
-        Ready to bring your idea to life?
-        Get guidance on self-publishing, KDP, custom apparel,
+        Guidance for self-publishing, KDP, custom apparel,
         and Silhouette Cameo.
       </p>
       <a href="mailto:houseofdianesdesigns@gmail.com" class="button">
@@ -74,8 +72,8 @@
   </section>
 
   <!-- MENDED THREADS -->
-  <section id="mended" class="section-container">
-    <div class="card">
+  <section class="section">
+    <div class="card center-card">
       <h2>Mended Threads</h2>
       <p>
         <strong>Coming Soon</strong><br>
@@ -87,28 +85,13 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 House of Diane's Designs</p>
+    <p>© 2026 House of Diane's Designs</p>
     <p>
       <a href="mailto:houseofdianesdesigns@gmail.com">
         houseofdianesdesigns@gmail.com
       </a>
     </p>
   </footer>
-
-  <!-- FADE-IN SCRIPT -->
-  <script>
-    const elements = document.querySelectorAll('.section-container, .shop-item, .card');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15 });
-
-    elements.forEach(el => observer.observe(el));
-  </script>
 
 </body>
 </html>
