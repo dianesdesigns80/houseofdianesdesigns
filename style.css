@@ -3,8 +3,6 @@
    Bold • Faith-Forward • Elegant
 ============================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
 html {
   scroll-behavior: smooth;
 }
@@ -27,7 +25,6 @@ header {
   padding: 90px 20px;
   font-family: 'Montserrat', sans-serif;
 
-  /* Background image properly set */
   background-image: url('images/hero-banner.png'); /* adjust path if needed */
   background-position: center;
   background-size: cover;
@@ -39,7 +36,7 @@ header {
 header h1,
 .hero-text,
 .hero-buttons {
-  position: relative; /* ensures content sits above background */
+  position: relative; 
   z-index: 1;
 }
 
@@ -86,14 +83,79 @@ a.button:hover {
 }
 
 /* ==============================
+   SECTIONS & CARDS
+============================== */
+
+.section-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #5B2D8B;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* CARD STYLING */
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ==============================
+   SHOP GRID / SHOP ITEMS
+============================== */
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.shop-item.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-item.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.shop-item.card .button {
+  margin-top: 15px;
+}
+
+/* ==============================
    FOOTER
 ============================== */
 
 footer {
   display: flex;
-  flex-direction: column; /* stack items vertically */
-  align-items: center;    /* horizontal center */
-  justify-content: center; /* vertical center */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 30px 20px;
   background: #5B2D8B;
@@ -110,27 +172,4 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
-/* ==============================
-   SECTIONS
-============================== */
-
-.section-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-/* Section Dividers */
-h2::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background-color: #5B2D8B;
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
-
 
