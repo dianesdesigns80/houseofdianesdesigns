@@ -38,19 +38,19 @@
     </div>
 
     <div class="shop-grid">
-      <div class="shop-item card">
+      <div class="card">
         <h3>Faith-Based Tees</h3>
         <p>Bold apparel designed to spark conversations and glorify God.</p>
         <a href="https://4hg.creator-spring.com" target="_blank" class="button">Shop Tees</a>
       </div>
 
-      <div class="shop-item card">
+      <div class="card">
         <h3>Books & Journals</h3>
         <p>Devotionals, journals, and faith-filled resources.</p>
         <a href="https://www.amazon.com/stores/Ms.-Jennifer-D.-Ming/author/B00P530VLU" target="_blank" class="button">Visit Bookstore</a>
       </div>
 
-      <div class="shop-item card">
+      <div class="card">
         <h3>Etsy Shop</h3>
         <p>Worship and inspirational music, apparel, and digital downloads created to stir hearts.</p>
         <a href="https://houseofdianesdesigns.etsy.com" target="_blank" class="button">Visit Etsy Shop</a>
@@ -75,7 +75,7 @@
 
   <!-- MENDED THREADS -->
   <section id="mended" class="section-container">
-    <div class="card">
+    <div class="card consult-card">
       <h2>Mended Threads</h2>
       <p>
         <strong>Coming Soon</strong><br>
@@ -94,21 +94,6 @@
       </a>
     </p>
   </footer>
-
-  <!-- FADE-IN SCRIPT -->
-  <script>
-    const elements = document.querySelectorAll('.section-container, .shop-item, .card');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15 });
-
-    elements.forEach(el => observer.observe(el));
-  </script>
 
 </body>
 </html>
