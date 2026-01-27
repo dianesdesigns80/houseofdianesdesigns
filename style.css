@@ -148,6 +148,48 @@ h2::after {
   }
 }
 
+/* ==============================
+   FORCE 3-CARD ROW LAYOUT
+============================== */
+
+.shop-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+
+/* Override .card behavior INSIDE shop grid */
+.shop-grid .card {
+  width: 100%;
+}
+
+.shop-item {
+  flex: 1 1 0;
+  max-width: 33%;
+  min-width: 280px;
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .shop-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .shop-item {
+    max-width: 45%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .shop-item {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
   .shop-item {
     flex: 0 1 100%;
