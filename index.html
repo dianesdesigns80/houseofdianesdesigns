@@ -1,175 +1,117 @@
-/* ==============================
-   HOUSE OF DIANE'S DESIGNS
-============================== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>House of Diane's Designs</title>
 
-html {
-  scroll-behavior: smooth;
-}
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #f5f0ff 0%, #e6dfff 100%);
-  color: #222;
-  margin: 0;
-  line-height: 1.6;
-}
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
-/* ==============================
-   HERO SECTION
-============================== */
+<body>
 
-header {
-  position: relative;
-  text-align: center;
-  padding: 90px 20px;
+  <!-- HERO -->
+  <header>
+    <h1>House of Diane's Designs</h1>
 
-  background-image: url('hero-banner.png'); /* adjust path */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+    <p class="hero-text">
+      I am the house that God built, filled with gifts and talents to glorify the Kingdom of God.
+      Let me help bring <strong>YOUR</strong> vision to life!
+      Shop our music, line of faith-based tees and visit our bookstore.
+      Do you have an idea you want to bring to life? Schedule your consultation today!
+    </p>
 
-  color: #222;
-}
+    <div class="hero-buttons">
+      <a href="#shop" class="button">Shop Now</a>
+      <a href="#consult" class="button">Book Consultation</a>
+    </div>
+  </header>
 
-header h1,
-.hero-text,
-.hero-buttons {
-  position: relative;
-  z-index: 1;
-}
+  <!-- SHOP -->
+  <section id="shop" class="section-container">
+    <div class="card shop-title-card">
+      <h2>Shop the House</h2>
+    </div>
 
-header h1::after {
-  content: '';
-  display: block;
-  width: 90px;
-  height: 5px;
-  background: #5B2D8B;
-  margin: 15px auto;
-  border-radius: 3px;
-}
+    <div class="shop-grid">
+      <div class="shop-item card">
+        <h3>Faith-Based Tees</h3>
+        <p>Bold apparel designed to spark conversations and glorify God.</p>
+        <a href="https://4hg.creator-spring.com" target="_blank" class="button">Shop Tees</a>
+      </div>
 
-.hero-text {
-  max-width: 900px;
-  margin: 0 auto 30px;
-  font-size: 1.15rem;
-}
+      <div class="shop-item card">
+        <h3>Books & Journals</h3>
+        <p>Devotionals, journals, and faith-filled resources.</p>
+        <a href="https://www.amazon.com/stores/Ms.-Jennifer-D.-Ming/author/B00P530VLU" target="_blank" class="button">Visit Bookstore</a>
+      </div>
 
-.hero-buttons {
-  margin-top: 20px;
-}
+      <div class="shop-item card">
+        <h3>Etsy Shop</h3>
+        <p>Worship and inspirational music, apparel, and digital downloads created to stir hearts.</p>
+        <a href="https://houseofdianesdesigns.etsy.com" target="_blank" class="button">Visit Etsy Shop</a>
+      </div>
+    </div>
+  </section>
 
-/* ==============================
-   BUTTONS
-============================== */
+  <!-- CONSULTATION -->
+  <section id="consult" class="section-container">
+    <div class="card consult-card">
+      <h2>Consultation Services</h2>
+      <p>
+        Ready to bring your idea to life?
+        Get guidance on self-publishing, KDP, custom apparel,
+        Silhouette Cameo, and heat press setup.
+      </p>
+      <a href="mailto:houseofdianesdesigns@gmail.com" class="button">
+        Schedule Consultation
+      </a>
+    </div>
+  </section>
 
-a.button {
-  display: inline-block;
-  margin: 10px;
-  padding: 0.8rem 1.8rem;
-  background: #5B2D8B;
-  color: #fff;
-  border: 1px solid #C9A24D;
-  border-radius: 8px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+  <!-- MENDED THREADS -->
+  <section id="mended" class="section-container">
+    <div class="card">
+      <h2>Mended Threads</h2>
+      <p>
+        <strong>Coming Soon</strong><br>
+        Hand-sewn worship garments, prayer shawls, flags,
+        and prayer pillows.
+      </p>
+    </div>
+  </section>
 
-a.button:hover {
-  background: #3D1A5E;
-  transform: scale(1.05);
-}
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 House of Diane's Designs</p>
+    <p>
+      <a href="mailto:houseofdianesdesigns@gmail.com">
+        houseofdianesdesigns@gmail.com
+      </a>
+    </p>
+  </footer>
 
-/* ==============================
-   SECTIONS & CARDS
-============================== */
+  <!-- FADE-IN SCRIPT -->
+  <script>
+    const elements = document.querySelectorAll('.section-container, .shop-item, .card');
 
-.section-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 50px 20px;
-  text-align: center;
-}
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
 
-h2::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background-color: #5B2D8B;
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
+    elements.forEach(el => observer.observe(el));
+  </script>
 
-/* Card styling for all cards */
-.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 20px;
-  text-align: center;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* ==============================
-   SHOP GRID
-============================== */
-
-.shop-grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.shop-item.card {
-  flex: 1 1 30%; /* 3 cards per row */
-  min-width: 250px; /* mobile responsiveness */
-}
-
-/* Buttons inside shop items */
-.shop-item.card .button {
-  margin-top: 15px;
-}
-
-/* Consultation card */
-.consult-card {
-  max-width: 600px;
-  margin: 30px auto 0;
-}
-
-/* ==============================
-   FOOTER
-============================== */
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 30px 20px;
-  background: #5B2D8B;
-  color: #fff;
-}
-
-footer p,
-footer a {
-  margin: 5px 0;
-  color: #fff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
+</body>
+</html>
 
     elements.forEach(el => observer.observe(el));
   </script>
