@@ -1,48 +1,44 @@
 /* ==============================
    HOUSE OF DIANE'S DESIGNS
-   Bold • Faith-Forward • Elegant
 ============================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
-* {
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 
-/* Base */
 body {
-  margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #f5f0ff, #e7ddff);
+  background: linear-gradient(135deg, #f5f0ff 0%, #e6dfff 100%);
   color: #222;
+  margin: 0;
   line-height: 1.6;
 }
 
-/* HERO */
-.hero {
+/* ==============================
+   HERO SECTION
+============================== */
+
+header {
   position: relative;
   text-align: center;
   padding: 90px 20px;
-  background-image: url('hero-banner.png'); /* image in SAME folder */
-  background-size: cover;
+
+  background-image: url('hero-banner.png'); /* adjust path */
   background-position: center;
-  isolation: isolate;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: #222;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(245, 240, 255, 0.75);
-  z-index: -1;
+header h1,
+.hero-text,
+.hero-buttons {
+  position: relative;
+  z-index: 1;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  color: #5B2D8B;
-}
-
-.hero h1::after {
+header h1::after {
   content: '';
   display: block;
   width: 90px;
@@ -54,16 +50,19 @@ body {
 
 .hero-text {
   max-width: 900px;
-  margin: 20px auto;
+  margin: 0 auto 30px;
   font-size: 1.15rem;
 }
 
 .hero-buttons {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
-/* Buttons */
-.button {
+/* ==============================
+   BUTTONS
+============================== */
+
+a.button {
   display: inline-block;
   margin: 10px;
   padding: 0.8rem 1.8rem;
@@ -71,83 +70,120 @@ body {
   color: #fff;
   border: 1px solid #C9A24D;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.button:hover {
+a.button:hover {
   background: #3D1A5E;
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 
-/* Sections */
-.section {
+/* ==============================
+   SECTIONS & CARDS
+============================== */
+
+.section-container {
   max-width: 1200px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
-.section h2 {
-  color: #5B2D8B;
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #5B2D8B;
+  margin: 12px auto 0;
+  border-radius: 2px;
 }
 
-/* Shop Grid */
-.shop-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
-}
-
-/* Cards */
+/* Card styling for all cards */
 .card {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px;
+  text-align: center;
 }
 
-.center-card {
-  max-width: 550px;
-  margin: auto;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Footer */
+/* ==============================
+   SHOP GRID
+============================== */
+
+.shop-grid {
+  display: flex;
+  justify-content: center;  /* center the row */
+  gap: 30px;               /* space between cards */
+  flex-wrap: wrap;          /* allow wrapping on very small screens */
+  margin-top: 20px;
+}
+
+.shop-item.card {
+  flex: 0 0 30%;           /* 3 cards per row, exact width */
+  min-width: 250px;        /* ensures mobile responsiveness */
+  box-sizing: border-box;  /* prevents margin/padding from breaking layout */
+}
+
+/* Buttons inside shop items */
+.shop-item.card .button {
+  margin-top: 15px;
+}
+
+/* Consultation card */
+.consult-card {
+  max-width: 600px;
+  margin: 30px auto 0;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
 footer {
-  background: #5B2D8B;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 30px 20px;
+  background: #5B2D8B;
+  color: #fff;
 }
 
+footer p,
 footer a {
-  color: #C9A24D;
+  margin: 5px 0;
+  color: #fff;
   text-decoration: none;
 }
 
-/* Responsive */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
 @media (max-width: 900px) {
-  .shop-grid {
-    grid-template-columns: 1fr 1fr;
+  .shop-item.card {
+    flex: 0 0 45%;  /* 2 cards per row */
   }
 }
 
 @media (max-width: 600px) {
-  .shop-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-}
-
-
-@media (max-width: 600px) {
-  .shop-item {
-    flex: 0 1 100%;
+  .shop-item.card {
+    flex: 0 0 100%; /* 1 card per row on mobile */
   }
 }
