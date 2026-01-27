@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #f5f0ff 0%, #e6dfff 100%); 
+  background: linear-gradient(135deg, #f5f0ff 0%, #e6dfff 100%);
   color: #222;
   margin: 0;
   line-height: 1.6;
@@ -27,8 +27,12 @@ header {
   padding: 90px 20px;
   font-family: 'Montserrat', sans-serif;
 
-  /* Background image only */
-  background: url('images/hero-banner.png') center/cover no-repeat;
+  /* Background image properly set */
+  background-image: url('images/hero-banner.png'); /* adjust path if needed */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   color: #222;
 }
 
@@ -59,26 +63,10 @@ header h1::after {
   margin-top: 20px;
 }
 
-/* Buttons */
-a.button {
-  display: inline-block;
-  margin: 10px;
-  padding: 0.8rem 1.8rem;
-  background: #5B2D8B; /* purple */
-  color: #fff;
-  border: 1px solid #C9A24D; /* gold border */
-  border-radius: 8px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+/* ==============================
+   BUTTONS
+============================== */
 
-a.button:hover {
-  background: #3D1A5E; /* darker purple hover */
-  transform: scale(1.05);
-}
-
-/* Buttons */
 a.button {
   display: inline-block;
   margin: 10px;
@@ -123,26 +111,10 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Buttons */
-a.button {
-  display: inline-block;
-  margin: 10px;
-  padding: 0.8rem 1.8rem;
-  background: #5B2D8B; /* purple */
-  color: #fff;
-  border: 1px solid #C9A24D; /* gold border */
-  border-radius: 8px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+/* ==============================
+   SECTIONS
+============================== */
 
-a.button:hover {
-  background: #3D1A5E; /* darker purple hover */
-  transform: scale(1.05);
-}
-
-/* Sections */
 .section-container {
   max-width: 1200px;
   margin: auto;
