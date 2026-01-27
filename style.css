@@ -28,7 +28,7 @@ header {
   font-family: 'Montserrat', sans-serif;
 
   /* Background image only */
-  background: url('hero-banner.png') center/cover no-repeat;
+  background: url('images/hero-banner.png') center/cover no-repeat;
   color: #222;
 }
 
