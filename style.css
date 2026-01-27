@@ -23,7 +23,7 @@ header {
   text-align: center;
   padding: 90px 20px;
 
-  background-image: url('hero-banner.png'); /* adjust path */
+  background-image: url('images/hero-banner.png'); /* adjust path */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
