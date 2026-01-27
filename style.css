@@ -23,7 +23,7 @@ header {
   text-align: center;
   padding: 90px 20px;
 
-  background-image: url('images/hero-banner.png'); /* adjust path */
+  background-image: url('hero-banner.png'); /* adjust path */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -107,66 +107,4 @@ h2::after {
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 20px;
-  text-align: center;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* ==============================
-   SHOP GRID
-============================== */
-
-.shop-grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.shop-item.card {
-  flex: 1 1 30%; /* 3 cards per row */
-  min-width: 250px; /* mobile responsiveness */
-}
-
-/* Buttons inside shop items */
-.shop-item.card .button {
-  margin-top: 15px;
-}
-
-/* Consultation card */
-.consult-card {
-  max-width: 600px;
-  margin: 30px auto 0;
-}
-
-/* ==============================
-   FOOTER
-============================== */
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 30px 20px;
-  background: #5B2D8B;
-  color: #fff;
-}
-
-footer p,
-footer a {
-  margin: 5px 0;
-  color: #fff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
+  transition: transform 0.3s ease, bo
