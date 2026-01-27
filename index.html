@@ -25,6 +25,12 @@
       Do you have an idea you want to bring to life? Schedule your consultation today!
     </p>
 
+    <!-- Scripture under hero -->
+    <p class="hero-scripture">
+      "And whatever you do, do it for the glory of the Lord." <br>
+      1 Corinthians 10:31
+    </p>
+
     <div class="hero-buttons">
       <a href="#shop" class="button">Shop Now</a>
       <a href="#consult" class="button">Book Consultation</a>
@@ -39,18 +45,21 @@
 
     <div class="shop-grid">
       <div class="card">
+        <img src="images/tees.jpg" alt="Faith-Based Tees" class="card-image">
         <h3>Faith-Based Tees</h3>
         <p>Bold apparel designed to spark conversations and glorify God.</p>
         <a href="https://4hg.creator-spring.com" target="_blank" class="button">Shop Tees</a>
       </div>
 
       <div class="card">
+        <img src="images/books.jpg" alt="Books and Journals" class="card-image">
         <h3>Books & Journals</h3>
         <p>Devotionals, journals, and faith-filled resources.</p>
         <a href="https://www.amazon.com/stores/Ms.-Jennifer-D.-Ming/author/B00P530VLU" target="_blank" class="button">Visit Bookstore</a>
       </div>
 
       <div class="card">
+        <img src="images/etsy.jpg" alt="Etsy Shop" class="card-image">
         <h3>Etsy Shop</h3>
         <p>Worship and inspirational music, apparel, and digital downloads created to stir hearts.</p>
         <a href="https://houseofdianesdesigns.etsy.com" target="_blank" class="button">Visit Etsy Shop</a>
@@ -94,6 +103,21 @@
       </a>
     </p>
   </footer>
+
+  <!-- FADE-IN SCRIPT -->
+  <script>
+    const elements = document.querySelectorAll('.section-container, .shop-grid .card, .consult-card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
