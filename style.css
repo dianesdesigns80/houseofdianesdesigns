@@ -1,5 +1,5 @@
 /* ==============================
-   HOUSE OF DIANE'S DESIGNS
+   GLOBAL
 ============================== */
 
 html {
@@ -15,27 +15,13 @@ body {
 }
 
 /* ==============================
-   HERO SECTION
+   HERO
 ============================== */
 
 header {
-  position: relative;
   text-align: center;
   padding: 90px 20px;
-
-  background-image: url('images/hero-banner.png'); /* adjust path */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  color: #222;
-}
-
-header h1,
-.hero-text,
-.hero-buttons {
-  position: relative;
-  z-index: 1;
+  background: url('images/hero-banner.png') center / cover no-repeat;
 }
 
 header h1::after {
@@ -62,7 +48,7 @@ header h1::after {
    BUTTONS
 ============================== */
 
-a.button {
+.button {
   display: inline-block;
   margin: 10px;
   padding: 0.8rem 1.8rem;
@@ -75,41 +61,33 @@ a.button {
   transition: all 0.3s ease;
 }
 
-a.button:hover {
+.button:hover {
   background: #3D1A5E;
   transform: scale(1.05);
 }
 
 /* ==============================
-   SECTIONS & CARDS
+   SECTIONS
 ============================== */
 
 .section-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
   padding: 50px 20px;
   text-align: center;
 }
 
-h2::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background-color: #5B2D8B;
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
+/* ==============================
+   CARDS
+============================== */
 
-/* Card styling for all cards */
 .card {
   background: #fff;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 20px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -117,33 +95,29 @@ h2::after {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* Section title card */
+.shop-title-card {
+  max-width: 400px;
+  margin: 0 auto 40px;
+}
+
 /* ==============================
-   SHOP GRID
+   SHOP GRID (FIXED 3-CARD ROW)
 ============================== */
 
 .shop-grid {
-  display: flex;
-  justify-content: center;  /* center the row */
-  gap: 30px;               /* space between cards */
-  flex-wrap: wrap;          /* allow wrapping on very small screens */
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.shop-item.card {
-  flex: 0 0 30%;           /* 3 cards per row, exact width */
-  min-width: 250px;        /* ensures mobile responsiveness */
-  box-sizing: border-box;  /* prevents margin/padding from breaking layout */
-}
+/* ==============================
+   CONSULT / MENDED
+============================== */
 
-/* Buttons inside shop items */
-.shop-item.card .button {
-  margin-top: 15px;
-}
-
-/* Consultation card */
 .consult-card {
   max-width: 600px;
-  margin: 30px auto 0;
+  margin: 0 auto;
 }
 
 /* ==============================
@@ -151,19 +125,13 @@ h2::after {
 ============================== */
 
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   padding: 30px 20px;
   background: #5B2D8B;
   color: #fff;
 }
 
-footer p,
 footer a {
-  margin: 5px 0;
   color: #fff;
   text-decoration: none;
 }
@@ -177,14 +145,13 @@ footer a:hover {
 ============================== */
 
 @media (max-width: 900px) {
-  .shop-item.card {
-    flex: 0 0 45%;  /* 2 cards per row */
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  .shop-item.card {
-    flex: 0 0 100%; /* 1 card per row on mobile */
+  .shop-grid {
+    grid-template-columns: 1fr;
   }
 }
-
