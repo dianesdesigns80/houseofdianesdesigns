@@ -108,3 +108,48 @@ h2::after {
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, bo
+
+/* ==============================
+   SHOP GRID LAYOUT FIX
+============================== */
+
+/* Ensure grid behaves like cards, not full-width blocks */
+.shop-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* Constrain card width so 3 can sit side-by-side */
+.shop-item {
+  flex: 0 1 320px;   /* THIS is the key line */
+  max-width: 320px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Ensure cards don’t stretch oddly */
+.card {
+  box-sizing: border-box;
+}
+
+/* Consultation centered below */
+.consult-card {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Mobile stacking */
+@media (max-width: 900px) {
+  .shop-item {
+    flex: 0 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .shop-item {
+    flex: 0 1 100%;
+  }
+}
