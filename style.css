@@ -145,6 +145,13 @@ header h1::after {
   gap: 24px;
 }
 
+.shop-grid .card {
+  display: flex;           /* make card a flex container */
+  flex-direction: column;  /* stack content vertically */
+  justify-content: space-between; /* push button to bottom */
+  min-height: 320px;       /* ensure all cards have the same minimum height */
+}
+
 /* ==============================
    FOOTER
 ============================== */
