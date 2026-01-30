@@ -184,9 +184,9 @@ footer a:hover {
 }
 /* REVIEWS */
 .reviews-card {
-  max-width: 800px;
+  max-width: 760px;
   margin: auto;
-  padding: 45px 35px;
+  padding: 35px 30px;
 }
 
 .reviews-intro {
