@@ -11,6 +11,29 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+  
+<script>
+  const reviews = document.querySelectorAll('.review');
+  const dots = document.querySelectorAll('.dot');
+  let currentReview = 0;
+
+  function showReview(index) {
+    reviews.forEach((review, i) => {
+      review.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+    currentReview = index;
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showReview(index));
+  });
+
+  setInterval(() => {
+    let next = (currentReview + 1) % reviews.length;
+    showReview(next);
+  }, 6000);
+</script>
 
 <body>
 
@@ -80,6 +103,56 @@
       </div>
     </div>
   </section>
+  
+<!-- REVIEWS -->
+<section id="reviews" class="section-container">
+  <div class="card reviews-card">
+    <h2>What Clients Are Saying</h2>
+    <p class="reviews-intro">
+      <strong>Every vision begins with a conversation.</strong><br>
+      From apparel and design to publishing and creative consulting,
+      here’s what clients have shared about working with House of Diane’s Designs.
+    </p>
+
+    <div class="review-slider">
+
+      <div class="review active">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">
+          “Amazing. Jennifer is talented and creative. She took the vision I had
+          and completely brought it to life.”
+        </p>
+        <p class="review-meta">— Michelle • Apparel / Design</p>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">
+          “The owner was very professional and patient, even when I wasn’t sure
+          which direction to go. She provided several options and delivered quickly.
+          I absolutely love the logo.”
+        </p>
+        <p class="review-meta">— Anonymous • Logo Design</p>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">
+          “Working with House of Diane’s Designs was a truly pleasant experience.
+          The service was top-tier, professional, and the customer care exceeded expectations.”
+        </p>
+        <p class="review-meta">— Verified Client • Apparel / Design</p>
+      </div>
+
+    </div>
+
+    <div class="review-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
 
   <!-- CONSULTATION -->
   <section id="consult" class="section-container">
