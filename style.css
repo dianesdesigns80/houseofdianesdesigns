@@ -180,6 +180,73 @@ footer a:hover {
   .shop-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+   
+}
+/* REVIEWS */
+.reviews-card {
+  max-width: 800px;
+  margin: auto;
+  padding: 45px 35px;
+}
+
+.reviews-intro {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.review-slider {
+  position: relative;
+  min-height: 180px;
+}
+
+.review {
+  display: none;
+  animation: fadeIn 0.6s ease;
+}
+
+.review.active {
+  display: block;
+}
+
+.stars {
+  color: #C9A24D;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.review-text {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+}
+
+.review-meta {
+  font-weight: 600;
+  color: #5B2D8B;
+}
+
+.review-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.review-dots .dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.review-dots .dot.active {
+  background: #5B2D8B;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 600px) {
