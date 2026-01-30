@@ -11,53 +11,6 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-  
-<script>
-  const reviews = document.querySelectorAll('.review');
-  const dots = document.querySelectorAll('.review-dots .dot');
-  const slider = document.querySelector('.review-slider');
-
-  let currentIndex = 0;
-  let interval;
-
-  function showReview(index) {
-    reviews.forEach(r => r.classList.remove('active'));
-    dots.forEach(d => d.classList.remove('active'));
-
-    reviews[index].classList.add('active');
-    dots[index].classList.add('active');
-
-    currentIndex = index;
-  }
-
-  function startAutoScroll() {
-    interval = setInterval(() => {
-      let nextIndex = (currentIndex + 1) % reviews.length;
-      showReview(nextIndex);
-    }, 5000);
-  }
-
-  function stopAutoScroll() {
-    clearInterval(interval);
-  }
-
-  // Dot click functionality
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      stopAutoScroll();
-      showReview(index);
-      startAutoScroll();
-    });
-  });
-
-  // Pause on hover
-  slider.addEventListener('mouseenter', stopAutoScroll);
-  slider.addEventListener('mouseleave', startAutoScroll);
-
-  // Start on load
-  startAutoScroll();
-  
-</script>
 
 <body>
 
@@ -72,9 +25,8 @@
       Do you have an idea you want to bring to life? Schedule your consultation today!
     </p>
 
-    <!-- Scripture under hero -->
     <p class="hero-scripture">
-      "And whatever you do, do it for the glory of the Lord." <br>
+      "And whatever you do, do it for the glory of the Lord."<br>
       1 Corinthians 10:31
     </p>
 
@@ -105,19 +57,17 @@
         <a href="https://www.amazon.com/stores/Ms.-Jennifer-D.-Ming/author/B00P530VLU" target="_blank" class="button">Visit Bookstore</a>
       </div>
 
-      <div class="card album-card">
-  <img src="images/my-truth-album.jpg" alt="My Truth Album Cover" class="card-image">
-
-  <h3>My Truth Album</h3>
-  <p>
-    A healing, faith-forward worship album sharing truth, testimony,
-    and transformation.
-  </p>
-
-  <a href="https://payhip.com/HouseofDianesDesigns" target="_blank" class="button">
-    Purchase Album
-  </a>
-</div>
+      <div class="card">
+        <img src="images/my-truth-album.jpg" alt="My Truth Album Cover" class="card-image">
+        <h3>My Truth Album</h3>
+        <p>
+          A healing, faith-forward worship album sharing truth,
+          testimony, and transformation.
+        </p>
+        <a href="https://payhip.com/HouseofDianesDesigns" target="_blank" class="button">
+          Purchase Album
+        </a>
+      </div>
 
       <div class="card">
         <img src="images/etsy.jpg" alt="Etsy Shop" class="card-image">
@@ -127,60 +77,57 @@
       </div>
     </div>
   </section>
-  
-<!-- REVIEWS -->
-<section id="reviews" class="section-container">
-  <div class="card reviews-card">
-    <h2>What Clients Are Saying</h2>
-    <p class="reviews-intro">
-      <strong>Every vision begins with a conversation.</strong><br>
-      From apparel and design to publishing and creative consulting,
-      here’s what clients have shared about working with House of Diane’s Designs.
-    </p>
 
-    <div class="review-slider">
+  <!-- REVIEWS -->
+  <section id="reviews" class="section-container">
+    <div class="card reviews-card">
+      <h2>What Clients Are Saying</h2>
 
-      <div class="review active">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">
-          “Amazing. Jennifer is talented and creative. She took the vision I had
-          and completely brought it to life.”
-        </p>
-        <p class="review-meta">— Michelle • Apparel / Design</p>
+      <p class="reviews-intro">
+        <strong>Every vision begins with a conversation.</strong><br>
+        From apparel and design to publishing and creative consulting,
+        here’s what clients have shared about working with House of Diane’s Designs.
+      </p>
+
+      <div class="review-slider">
+
+        <div class="review active">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            “Amazing. Jennifer is talented and creative. She took the vision I had
+            and completely brought it to life.”
+          </p>
+          <p class="review-meta">— Michelle • Apparel / Design</p>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            “The owner was very professional and patient, even when I wasn’t sure
+            which direction to go. She provided several options and delivered quickly.
+            I absolutely love the logo.”
+          </p>
+          <p class="review-meta">— Anonymous • Logo Design</p>
+        </div>
+
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            “Working with House of Diane’s Designs was a truly pleasant experience.
+            The service was top-tier, professional, and the customer care exceeded expectations.”
+          </p>
+          <p class="review-meta">— Verified Client • Apparel / Design</p>
+        </div>
+
       </div>
 
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">
-          “The owner was very professional and patient, even when I wasn’t sure
-          which direction to go. She provided several options and delivered quickly.
-          I absolutely love the logo.”
-        </p>
-        <p class="review-meta">— Anonymous • Logo Design</p>
+      <div class="review-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
-
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">
-          “Working with House of Diane’s Designs was a truly pleasant experience.
-          The service was top-tier, professional, and the customer care exceeded expectations.”
-        </p>
-        <p class="review-meta">— Verified Client • Apparel / Design</p>
-      </div>
-
     </div>
-
-    <div class="review-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-  </div>
-</section>
-  
-<p class="reviews-cta">
- 
-</p>
+  </section>
 
   <!-- CONSULTATION -->
   <section id="consult" class="section-container">
@@ -194,18 +141,6 @@
       <a href="mailto:houseofdianesdesigns@gmail.com" class="button">
         Schedule Consultation
       </a>
-    </div>
-  </section>
-
-  <!-- MENDED THREADS -->
-  <section id="mended" class="section-container">
-    <div class="card consult-card">
-      <h2>Mended Threads</h2>
-      <p>
-        <strong>Coming Soon</strong><br>
-        Hand-sewn worship garments, prayer shawls, flags,
-        and prayer pillows.
-      </p>
     </div>
   </section>
 
@@ -234,5 +169,18 @@
     elements.forEach(el => observer.observe(el));
   </script>
 
-</body>
-</html>
+  <!-- REVIEWS SLIDER SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const reviews = document.querySelectorAll('.review');
+      const dots = document.querySelectorAll('.review-dots .dot');
+      const slider = document.querySelector('.review-slider');
+
+      let currentIndex = 0;
+      let interval;
+
+      function showReview(index) {
+        reviews.forEach(r => r.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+
+        reviews[index].cl
